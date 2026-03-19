@@ -6,7 +6,7 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: cricket
+      app: football
   template:
     metadata:
       labels:
