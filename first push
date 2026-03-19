@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cricket-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cricket
+  template:
+    metadata:
+      labels:
+        app: cricket
+    spec:
+      containers:
+      - name: cricket-container
+        image: cricket-app
+        ports:
+        - containerPort: 80
